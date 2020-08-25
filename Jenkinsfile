@@ -5,7 +5,7 @@ pipeline{
             steps{
                 withCredentials([usernamePassword(credentialsId: 'vsphereMaikWaigant', usernameVariable: 'VI_USERNAME', passwordVariable: 'VI_PASSWORD')]) {
                   sh """
-                    ls lah
+                    ls -lah
                     pwd
                     podman run --rm -it --entrypoint="/usr/bin/pwsh" \
                     -e VI_SERVER = "10.133.250.201" \
