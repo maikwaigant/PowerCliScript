@@ -10,7 +10,9 @@ pipeline{
                     -e VI_USERNAME=${VI_USERNAME} \
                     -e VI_PASSWORD=${VI_PASSWORD} \
                     -e VI_VM=SputnikMaik \
-                    -v ${WORKSPACE}/:/scripts vmware/powerclicore -File /scripts/pcli_core_docker_sample2.ps1
+                    -v ${WORKSPACE}/:/scripts \
+                    --security-opt label=disable \
+                    vmware/powerclicore -File /scripts/pcli_core_docker_sample2.ps1
                   """
                 }
             }
