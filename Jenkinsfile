@@ -12,7 +12,7 @@ pipeline{
                     -e VI_USERNAME=${VI_USERNAME} \
                     -e VI_PASSWORD=${VI_PASSWORD} \
                     -e VI_VM=SputnikMaik \
-                    -v ${PWD}/:/scripts vmware/powerclicore /scripts/pcli_core_docker_sample2.ps1
+                    -v ${WORKSPACE}/:/scripts vmware/powerclicore /scripts/pcli_core_docker_sample2.ps1
                   """
                 }
             }
